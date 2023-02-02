@@ -1,9 +1,9 @@
-let genButton = document.getElementById("genbutton")
-let inputBox = document.getElementById("input")
-let caps = document.getElementById("capsCheck");
-let special = document.getElementById("specialCheck");
-let numbers = document.getElementById("numbersCheck");
-let passwordBox = document.getElementById("password-text-box");
+const genButton = document.getElementById("genbutton")
+const inputBox = document.getElementById("input")
+const caps = document.getElementById("capsCheck");
+const special = document.getElementById("specialCheck");
+const numbers = document.getElementById("numbersCheck");
+const passwordBox = document.getElementById("password-text-box");
 let count = 0;
 let oldPasswords = [];
 
@@ -65,10 +65,10 @@ function CreatePassword(length) {
 }
 
 function AddPasswordToList(password) {
-    let grandparent = document.getElementById("old-passwords");
-    let parent = document.createElement("li");
-    let storePass = document.createElement("textarea");
-    let storeCopyBtn = document.createElement("button");
+    const grandparent = document.getElementById("old-passwords");
+    const parent = document.createElement("li");
+    const storePass = document.createElement("textarea");
+    const storeCopyBtn = document.createElement("button");
     grandparent.appendChild(parent);
 
     //Setting up textbox element
@@ -97,6 +97,7 @@ function AddPasswordToList(password) {
     //Finalizing
     parent.appendChild(storePass);
     parent.appendChild(storeCopyBtn);
+    grandparent.insertBefore(parent, grandparent.children[0]);
     storeCopyBtn.addEventListener("click", () => {
         console.log("Copy button id: " + storeCopyBtn.id);
         storePass.setSelectionRange(0, 99999);
@@ -109,8 +110,4 @@ function AddPasswordToList(password) {
     console.log("Password Array: " + oldPasswords[count]);
     console.log(copyBtn)
     count++;
-}
-
-function CopyToClipboard() {
-    console.log("Here");
 }
