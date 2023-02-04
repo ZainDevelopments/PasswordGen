@@ -22,7 +22,7 @@ body {
 
 .title {
     color: white;
-    font-size: 5rem;
+    width: 100%;
     margin: 0;
     padding: 0;
 }
@@ -284,4 +284,27 @@ input[type=number] {
 .copy-button:active {
     border-color: rgb(22, 90, 22);
     animation: copy-pop 100ms ease-in;
+}
+
+/*Reactive Code*/
+@media only screen and (max-width: 590px) {
+    .input-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .char-length {
+        justify-content: center;
+    }   
+
+    .gen-button {
+        margin-top: 2%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .add-margin {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
 }

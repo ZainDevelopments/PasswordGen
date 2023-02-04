@@ -109,5 +109,5 @@ function AddPasswordToList(password) {
     console.log(grandparent);
     console.log("Password Array: " + oldPasswords[count]);
     console.log(copyBtn)
-    count++;
+    count++; 
 }
