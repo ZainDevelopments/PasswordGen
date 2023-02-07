@@ -152,7 +152,7 @@ input[type=number] {
 .inputBox:focus {
     color: rgb(255, 255, 255);
     border-bottom: 3px solid #ffffff;
-    transition: border-bottom 150ms ease-in;
+    transition: border 200ms ease-in;
 }
 
 /*Generate Password Button*/
